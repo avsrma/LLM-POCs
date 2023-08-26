@@ -1,16 +1,25 @@
-## Summarize Conversations with GPT3/ChatGPT 
-A simple webapp built around GPT3 and ChatGPT models to summarize conversations such as business meetings, interviews, presentations, and more.  
+# LLM-based applications
+This repository contains applications built based on Large Language Models (GPT-4, ChatGPT, and LLAMA). 
 
-The frontend is built with [Streamlit](https://github.com/streamlit/streamlit). Checkout their amazing project! 
+## Meeting Summarizer
+Summarizes a meeting or a conversation based on an input transcript. 
 
-![image](data/screenshot.png)
+## PDF Summarizer
+Upload a PDF document and summarize it in language of choice. 
 
-## Start the app server 
+## POC Builder / Code Generator
+Generates code for any given use-case using GPT-4. Enables users to specify their requirements in natural language, 
+and creates a webapp using Streamlit. Provided an experimental solution to quickly build POCs using LLMs. 
+
 ```
-python -m streamlit run main.py 
+Examples of use-cases:
+# Create an app using which users can upload pdf documents, that are then summarized by chatgpt
+# Create a sample streamlit app with dataframe, static table, line chart, and scattarplot
+# Create an app using which a user can upload pdf documents. There should be a button to get a summary. There should a text area where a user can add some natural language instructions. These instructions should be processed by AI and then used to create bar or pie charts, if the user clicks on appropriate buttons.
+
 ```
 
-## Setup 
-- Follow the [Prerequisites](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?tabs=command-line&pivots=programming-language-studio#prerequisites)
-from Microsoft to setup Azure OpenAI resource. 
-- Update the .env file with your keys 
+## Wikipedia AI-Interface
+Provides a natural language interface to Wikipedia. Enables users to ask questions via voice or 
+have a multi-turn interaction via a text-based chat. The webapp is built using Streamlit. 
+
