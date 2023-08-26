@@ -15,11 +15,11 @@ def update_message(current_conversation, role, content):
     current_conversation.append(message)
 
 def chatgpt(content):
-    with open("initial_system_prompt.txt", "r", encoding="utf-8") as f:
-        initial_system_prompt = f.read()
+    with open("system_prompt.txt", "r", encoding="utf-8") as f:
+        system_prompt = f.read()
 
     conversation = [{"role": "system",
-                     "content": initial_system_prompt}]
+                     "content": system_prompt}]
     update_message(conversation, "user", content)
 
     openai.api_type = "azure"
@@ -60,11 +60,11 @@ def launch_poc(text):
 
 def app():
     st.title("POC Builder")
-    st.subheader("Build POCs using ChatGPT!")
+    st.subheader("Build fully-functional proof-of-concept applications!")
 
-    text = st.text_area("Specify POC credentials",
+    text = st.text_area("Please specify your requirements in natural language",
                         placeholder="Be as detailed or brief as you want",
-                        help="Creates a POC using ChatGPT based on specifications provided by you!",
+                        help="Generates code using GPT-4 based on specifications provided by you!",
                         height=280)
 
     if st.button("Generate POC"):
