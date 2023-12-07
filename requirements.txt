@@ -16,3 +16,4 @@ python-dotenv
 streamlit
 speechbrain
 streamlit_chat
+PyPDF2
