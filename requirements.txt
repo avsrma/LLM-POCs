@@ -17,3 +17,4 @@ streamlit
 speechbrain
 streamlit_chat
 PyPDF2
+youdotcom
